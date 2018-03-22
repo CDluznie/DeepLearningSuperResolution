@@ -12,7 +12,7 @@ L’objectif de ce projet est de mettre au point un réseau de neurones profonds
   * --model *model* : choix du modèle, valeurs possible : espcn, edspcn, edspcn par défaut
   * --dataset *dataset* : jeu de données d'entrainement, data/General-100 par défaut
   * --batchsize *batchsize* : nombre d'images par epoque, 20 par défaut
-  * --epochs e : nombre d'iterations totale, 1000 par défaut
+  * --epochs *epochs* : nombre d'iterations totale, 1000 par défaut
 
 * **Super-Resolution** : upscale.py
   * --model *model* : choix du modèle, valeurs possible : espcn, edspcn, edspcn par défaut
