@@ -48,5 +48,9 @@ if __name__ == '__main__':
 			] = till_hr
 	print("Image upscaled")
 
-	scipy.misc.imsave(os.path.join("results", input_image_name + "_lr" + input_image_extension), lr_output_image)
-	scipy.misc.imsave(os.path.join("results", input_image_name + "_hr" + input_image_extension), hr_output_image)
+	out_lr_path = os.path.join("results", input_image_name + "_lr" + input_image_extension)
+	out_hr_path = os.path.join("results", input_image_name + "_hr" + input_image_extension)
+	scipy.misc.imsave(out_lr_path, lr_output_image)
+	scipy.misc.imsave(out_hr_path, hr_output_image)
+
+	print("Upscaled image save in " + out_hr_path)

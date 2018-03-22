@@ -5,7 +5,7 @@ from network import SuperResolutionNeuralNetwork
 
 if __name__ == '__main__':
 
-	parser = argparse.ArgumentParser()
+	parser = argparse.ArgumentParser(description="Train a super-resolution neural network")
 	parser.add_argument("--model",		default="edspcn")
 	parser.add_argument("--dataset",	default="data/General-100")
 	parser.add_argument("--batchsize",	default=20,	type=int)
