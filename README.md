@@ -2,6 +2,7 @@
 L’objectif de ce projet est de mettre au point un réseau de neurones profonds pour la super-résolution d'image
 
 ## Dépendances
+* Python 3
 * TensorFlow
 * NumPy
 * SciPy
