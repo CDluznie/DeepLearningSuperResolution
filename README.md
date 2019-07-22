@@ -1,22 +1,36 @@
 # Deep Learning Super-Resolution
-L’objectif de ce projet est de mettre au point un réseau de neurones profonds pour la super-résolution d'image
 
-## Dépendances
+The goal of this project is to create a deep neural network for single image super-resolution.
+To solve this problem, we implement a state-of-the-art network (efficient sub-pixel convolutional neural networkESPCN) and build our own from that one (efficient deep sub-pixel convolutional neural network EDSPCN).
+
+## Results
+
+#### Input image :
+![image-bicubic](./examples/car_BICUBIC.bmp)
+
+#### ESPCN output image :
+![image-bicubic](./examples/car_ESPCN.bmp)
+
+#### EDSPCN output image :
+![image-bicubic](./examples/car_EDSPCN.bmp)
+
+## Requirements
+
 * Python 3
 * TensorFlow
 * NumPy
 * SciPy
 
-## Utilisation
+## Usage
 
-* **Entrainement** : train.py
-  * --model *model* : choix du modèle, valeurs possible : espcn, edspcn, edspcn par défaut
-  * --dataset *dataset* : jeu de données d'entrainement, data/General-100 par défaut
-  * --batchsize *batchsize* : nombre d'images par epoque, 20 par défaut
-  * --epochs *epochs* : nombre d'iterations totale, 1000 par défaut
+* **Training** : `python3 train.py`
+  * `--model model` : model to train, possible values : espcn, edspcn (edspcn by default)
+  * `--dataset dataset` : training dataset (*data/General-100* by default)
+  * `--batchsize batchsize` : size of batch (20 by default)
+  * `--epochs epochs` : number of epochs (1000 by default)
 
-* **Super-Resolution** : upscale.py
-  * --model *model* : choix du modèle, valeurs possible : espcn, edspcn, edspcn par défaut
-  * --image *image* : image d'entrée, argument requis
+* **Super-Resolution** : `upscale.py`
+  * `--model model` : model to use, possible values : espcn, edspcn (edspcn by default)
+  * `--image image` : input image to upscale
     
-* **Résumé de la phase d'entrainement** : tensorboard --logdir models/save/*MODEL*/train
+* **Summary of the training stage** : `tensorboard --logdir models/save/*MODEL*/train`
